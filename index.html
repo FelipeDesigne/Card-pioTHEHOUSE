@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Completo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #DAA520;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 80%;
+            max-height: 80vh;
+        }
+        .menu-container {
+            padding: 20px;
+        }
+        .categoria {
+            margin-top: 30px;
+            animation: slideIn 1s ease-out;
+            animation-fill-mode: both;
+        }
+        h2 {
+            font-size: 24px;
+            border-bottom: 2px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .item {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            position: relative;
+        }
+        .item::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            border-bottom: 1px dotted #DAA520;
+            z-index: 1;
+        }
+        .item-nome {
+            font-weight: bold;
+            font-size: 18px;
+            padding-right: 5px;
+            background-color: black;
+            z-index: 2;
+            position: relative;
+        }
+        .item-preco {
+            font-size: 18px;
+            padding-left: 5px;
+            background-color: black;
+            z-index: 2;
+            position: relative;
+        }
+        .descricao {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 20px;
+            }
+            .item-nome, .item-preco {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+	<div class="menu-nav">
+    <a href="#cervejas">Cervejas</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#porcoes">Porções</a>
+    <a href="#lanches">Lanches</a>
+    <a href="#pizzas">Pizzas</a>
+    <a href="#massas">Massas</a>
+    <a href="#sobremesas">Sobremesas</a>
+</div>
+
+<style>
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-nav a {
+    color: #DAA520;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-nav a:hover {
+    background-color: #DAA520;
+    color: black;
+}
+</style>
+
+    <div class="menu-container">
+        <div class="categoria" id="cervejas" style="animation-delay: 0.2s;">
+            <h2>CERVEJAS LATAS:</h2>
+            <div class="item">
+                <span class="item-nome">BRAHMA ZERO</span>
+                <span class="item-preco"></span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 0.4s;">
+            <h2>CERVEJAS LONG NECK:</h2>
+            <div class="item">
+                <span class="item-nome">HEINEKEN</span>
+                <span class="item-preco"></span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CORONA</span>
+                <span class="item-preco"></span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 0.6s;">
+            <h2>CERVEJAS GARRAFA:</h2>
+            <div class="item">
+                <span class="item-nome">HEINEKEN</span>
+                <span class="item-preco"></span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ORIGINAL</span>
+                <span class="item-preco"></span>
+            </div>
+            <div class="item">
+                <span class="item-nome">SKOL</span>
+                <span class="item-preco"></span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BRAHMA</span>
+                <span class="item-preco"></span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CHOPP BRAHMA</span>
+                <span class="item-preco"></span>
+            </div>
+        </div>
+
+        <div class="categoria" id="drinks" style="animation-delay: 0.8s;">
+            <h2>DRINKS:</h2>
+            <div class="item">
+                <span class="item-nome">BATIDA SENSAÇÃO</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BATIDA DE MARACUJÁ</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CAIPIRINHA DE CACHAÇA</span>
+                <span class="item-preco">R$22,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CAIPIRINHA DE SAQUÊ</span>
+                <span class="item-preco">R$22,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CAIPIRINHA DE VODKA</span>
+                <span class="item-preco">R$22,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CAIPIRINHA DE LIMÃO SICILIANO COM RAPADURA</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">MOJITO</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">MOSCOW MULE</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ESPANHOLA</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">RED GIN TONIC</span>
+                <span class="item-preco">R$30,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">TANGERINE GIN</span>
+                <span class="item-preco">R$30,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CUBA-LIBRE</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">CAMPARI COM LARANJA</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 1s;">
+            <h2>DRINKS SEM ÁLCOOL:</h2>
+            <div class="item">
+                <span class="item-nome">LIMONADA SUÍÇA COM LEITE CONDENSADO</span>
+                <span class="item-preco">R$23,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">PINK LEMONADE</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 1.2s;">
+            <h2>DOSES:</h2>
+            <div class="item">
+                <span class="item-nome">CACHAÇA</span>
+                <span class="item-preco">R$10,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">VODKA SMIRNOFF</span>
+                <span class="item-preco">R$15,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 1.4s;">
+            <h2>BEBIDAS NÃO ALCOÓLICAS:</h2>
+            <div class="item">
+                <span class="item-nome">ÁGUA SEM GÁS</span>
+                <span class="item-preco">R$4,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ÁGUA COM GÁS</span>
+                <span class="item-preco">R$4,50</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ÁGUA TÔNICA NORMAL</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">ÁGUA TÔNICA (ZERO)</span>
+                <span class="item-preco">R$6,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ENERGÉTICO MONSTER</span>
+                <span class="item-preco">R$14,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">COCA-COLA (NORMAL E ZERO):</span>
+                </div>
+            <div class="item">
+                <span class="item-nome">LATA </span>
+                <span class="item-preco">R$5,50</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">600ML</span>
+                <span class="item-preco">R$6,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">1L</span>
+                <span class="item-preco">R$10,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">2L</span>
+                <span class="item-preco">R$14,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">FABIANE (GUARANÁ, COLA, FRAMBOESA, LARANJA):</span>
+                </div>
+			<div class="item">
+                <span class="item-nome">500 ML</span>
+                <span class="item-preco">R$6,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">2L</span>
+                <span class="item-preco">R$8,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">SPRITE:</span>
+                </div>
+			<div class="item">
+                <span class="item-nome">LATA</span>
+                <span class="item-preco">R$5,50</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">FANTA LARANJA:</span>
+                </div>
+			<div class="item">
+                <span class="item-nome">LATA 350 ML</span>
+                <span class="item-preco">R$5,50</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">SCHWEPPES CITRUS:</span>
+                </div>
+			<div class="item">
+                <span class="item-nome">LATA</span>
+                <span class="item-preco">R$5,50</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">H2O(NORMAL E LIMONETO)</span>
+                <span class="item-preco">R$7,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">KAPPO(UVA, MORANGO, LARANJA)</span>
+                <span class="item-preco">R$4,00</span>
+            </div>
+			<div class="categoria" id="porcoes" style="animation-delay: 1.8s;">
+            <h2>SUCOS NATURAIS:</h2>
+			<div class="item">
+                <span class="item-nome">LARANJA</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">LIMÃO</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">MORANGO</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">MARACUJÁ</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">ABACAXI</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">LARANJA COM MORANGO</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">MORANGA COM LEITE</span>
+                <span class="item-preco">R$15,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">MARACUJA COM LEITE</span>
+                <span class="item-preco">R$15,00</span>
+            </div>
+				
+        </div>
+
+      	
+       <div class="categoria" id="porcoes" style="animation-delay: 1.8s;">
+            <h2>PORÇÕES:</h2>
+            <div class="item">
+                <span class="item-nome">MANDIOCA FRITA</span>
+                <span class="item-preco">R$28,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BATATA FRITA</span>
+                <span class="item-preco">R$28,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BATATA FRITA C/ CHEDDAR E BACON</span>
+                <span class="item-preco">R$34,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BATATA RUSTICA</span>
+                <span class="item-preco">R$38,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ISCA DE TILÁPIA</span>
+                <span class="item-preco">R$42,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">ISCA DE FRANGO</span>
+                <span class="item-preco">R$40,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CAMARÃO EMPANADO</span>
+                <span class="item-preco">R$40,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">MINI PASTELZINHO(CARNE, QUEIJO, MISTO)24 UNIDADES</span>
+                <span class="item-preco">R$35,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">DADINHO DE TAPIOCA</span>
+                <span class="item-preco">R$38,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">PORPETA(15 UNIDADES)</span>
+                <span class="item-preco">R$45,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">CONTRA FILÉ ACEBOLADO</span>
+                <span class="item-preco">R$59,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">BERINJELA CAPONATA C/ TORRADAS</span>
+                <span class="item-preco">R$30,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" style="animation-delay: 2s;">
+            <h2>TÁBUAS:</h2>
+            <div class="item">
+                <span class="item-nome">PICANHA C/ MANDIOCA</span>
+                <span class="item-preco">R$95,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">FILÉ MIGNON ACEBOLADO C/ BATATA RUSTICA</span>
+                <span class="item-preco">R$95,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">TILÁPIA EMPANADA, BATATA FRITA</span>
+                <span class="item-preco">R$70,00</span>
+            </div>
+			<div class="item">
+                <span class="item-nome">PICANHA, PÃO DE ALHO, LINGUIÇA, FAROFA</span>
+                <span class="item-preco">R$140,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" id="lanches" style="animation-delay: 2.2s;">
+            <h2>LANCHES ARTESANAIS:</h2>
+            <div class="item">
+                <span class="item-nome">COMMON BURGER</span>
+                <span class="item-preco">R$25,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO, CHEDDAR, CEBOLA ROXA, TOMATE, ALFACE, MAIONESE DA CASA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BURGER CARAMELIZADO</span>
+                <span class="item-preco">R$27,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO, CHEDDAR, CEBOLA CARAMELIZADA, BACON, MAIONESE DA CASA)</div>
+            <div class="item">
+                <span class="item-nome">BURGER CRISPY</span>
+                <span class="item-preco">R$27,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO, PICLES, CHEDDAR, CEBOLA CRISPY, BACON, MAIONESE DA CASA)</div>
+            
+            <div class="item">
+                <span class="item-nome">SPICY CHICKEN BURGER</span>
+                <span class="item-preco">R$23,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, PEITO DE FRANGO EMPANADO PICANTE, BACON, CEBOLA ROXA, MAIONESE DA CASA)</div>
+            
+            <div class="item">
+                <span class="item-nome">RED BURGER</span>
+                <span class="item-preco">R$28,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO, QUEIJO PRATO, BACON, CEBOLA ROXA, GELEIA DE FRUTAS VERMELHAS, TOMATE, RÚCULA)</div>
+            
+            
+                <div class="item">
+                <span class="item-nome">CATUPIRY BURGER</span>
+                <span class="item-preco">R$30,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO, CATUPIRY EMPANADO, CEBOLA ROXA, PICLES, MAIONESE DA CASA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BACON BIG BURGER</span>
+                <span class="item-preco">R$30,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER BOVINO DUPLO, QUEIJO PRATO, CEBOLA ROXA, GELEIA DE BACON, PICLES)</div>
+            
+            <div class="item">
+                <span class="item-nome">SMASH BURGER</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+            <div class="descricao">(PÃO BRIOCHE, HAMBÚRGUER PRENSADO, CHEDDAR, ALFACE, CEBOLA ROXA, PICLES, MAIONESE DA CASA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BANG BURGER</span>
+                <span class="item-preco">R$20,00</span>
+            </div>
+            <div class="descricao">(PÃO DE HAMBÚRGUER, HAMBÚRGUER PRENSADO, QUEIJO PRATO, MILHO, ERVILHA, OVO, BACON, ALFACE, TOMATE, MAIONESE DA CASA)</div>
+
+            <h2>ADICIONAIS:</h2>
+            <div class="item">
+                <span class="item-nome">ALFACE</span>
+                <span class="item-preco">R$2,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">RÚCULA</span>
+                <span class="item-preco">R$2,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">TOMATE</span>
+                <span class="item-preco">R$2,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CEBOLA ROXA</span>
+                <span class="item-preco">R$2,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">PICLES</span>
+                <span class="item-preco">R$3,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">QUEIJO (CHEDDAR OU PRATO)</span>
+                <span class="item-preco">R$3,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CEBOLA CARAMELIZADA</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CEBOLA CRISPY</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">TOMATE SECO</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">BACON</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">CATUPIRY EMPANADO</span>
+                <span class="item-preco">R$12,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">HAMBÚRGUER</span>
+                <span class="item-preco">R$10,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">GELÉIAS</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+            <div class="item">
+                <span class="item-nome">MOLHO DA CASA</span>
+                <span class="item-preco">R$5,00</span>
+            </div>
+        </div>
+
+        <div class="categoria" id="pizzas" style="animation-delay: 2.4s;">
+            <h2>PIZZAS TRADICIONAIS:</h2>
+            <div class="item">
+                <span class="item-nome">ABOBRINHA C/ MUSSARELA DE BÚFALA</span>
+                <span class="item-preco">R$50,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, ABOBRINHA, MUSSARELA DE BÚFALA, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">ALHO E ÓLEO</span>
+                <span class="item-preco">R$45,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, ALHO, LASCAS DE ALHO REGADO NO AZEITE, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">ATUM</span>
+                <span class="item-preco">R$56,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, ATUM, TOMATE PICADO, ERVILHA FRESCA, CATUPIRY, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BACON E ALHO</span>
+                <span class="item-preco">R$50,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, BACON, LÂMINAS DE ALHO, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BRÓCOLIS</span>
+                <span class="item-preco">R$48,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, BRÓCOLIS, LÂMINAS DE ALHO, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">BRÓCOLIS C/ BACON E ALHO</span>
+                <span class="item-preco">R$52,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, BRÓCOLIS, BACON, LÂMINAS DE ALHO, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">CALABRESA</span>
+                <span class="item-preco">R$50,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, CALABRESA, CEBOLA, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">CALABRESA C/ CATUPIRY</span>
+                <span class="item-preco">R$55,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, CALABRESA, CATUPIRY, CEBOLA, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">FRANGO C/ CATUPIRY</span>
+                <span class="item-preco">R$55,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, FRANGO DESFIADO CREMOSO, CATUPIRY, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">LOMBINHO</span>
+                <span class="item-preco">R$53,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, LOMBINHO, CATUPIRY, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">MARGUERITA</span>
+                <span class="item-preco">R$48,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, TOMATE CEREJA, MANJERICÃO, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">PALMITO</span>
+                <span class="item-preco">R$55,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PALMITO CREMOSO, CATUPIRY, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">PEPPERONI</span>
+                <span class="item-preco">R$56,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PEPPERONI, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">PORTUGUESA</span>
+                <span class="item-preco">R$53,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PRESUNTO, FATIAS DE TOMATE, MILHO, ERVILHA FRESCA, OVO COZIDO, CEBOLA, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">QUATRO QUEIJO</span>
+                <span class="item-preco">R$59,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PROVOLONE, QUEIJO PRATO, CATUPIRY, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">RÚCULA C/ TOMATE SECO</span>
+                <span class="item-preco">R$53,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, RÚCULA, TOMATE SECO, MUSSARELA DE BÚFALA, ORÉGANO E AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">MODA DA CASA</span>
+                <span class="item-preco">R$57,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, CALABRESA, PIMENTA VERDE, PIMENTA DEDO DE MOÇA, CEBOLA, ORÉGANO, AZEITONA)</div>
+            
+            <div class="item">
+                <span class="item-nome">MEXICANA</span>
+                <span class="item-preco">R$57,00</span>
+            </div>
+            <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, CARNE MOÍDA, PIMENTÃO, TOMATE, PIMENTA CALABRESA, CEBOLA, ORÉGANO, AZEITONA)</div>
+			
+			<div class="categoria" style="animation-delay: 2.6s;">
+			
+    <h2>PIZZAS GOURMET:</h2>
+    <div class="item">
+        <span class="item-nome">ALICHE</span>
+        <span class="item-preco">R$90,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, ALICHE, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">CAMARÃO</span>
+        <span class="item-preco">R$90,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, CAMARÃO, MUSSARELA DE BÚFALA, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">MIGNON NO BARBECUE</span>
+        <span class="item-preco">R$79,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, MIGNON, BARBECUE, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">MIGNON QUATRO QUEIJO</span>
+        <span class="item-preco">R$85,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PROVOLONE, QUEIJO PRATO, CATUPIRY, MIGNON, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">PARMA C/ MUSSARELA DE BÚFALA</span>
+        <span class="item-preco">R$85,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PARMA, MUSSARELA DE BÚFALA, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">PICANHA</span>
+        <span class="item-preco">R$79,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PICANHA, CEBOLA, TOMATE, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">PICANHA C/ GORGONZOLA</span>
+        <span class="item-preco">R$85,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, PICANHA, CEBOLA, GORGONZOLA, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">SALMÃO</span>
+        <span class="item-preco">R$90,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, SALMÃO, ALCAPARRAS, FINALIZADO COM CEBOLINHA, ORÉGANO E AZEITONA)</div>
+    
+    <div class="item">
+        <span class="item-nome">STROGONOFF INVERTIDO</span>
+        <span class="item-preco">R$79,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, STROGONOFF DE CARNE, BATATA PALHA)</div>
+    
+    <div class="item">
+        <span class="item-nome">CALABRESA ITALIANA</span>
+        <span class="item-preco">R$79,00</span>
+    </div>
+    <div class="descricao">(MOLHO DA CASA, MUSSARELA, CALABRESA ITALIANA, TOMATE,CEBOLA,ORÉGANO E AZEITONAS)</div>
+    
+    <div class="item">
+        <span class="item-nome">FRANGO INDIANO</span>
+        <span class="item-preco">R$79,00</span>
+    </div>
+    <div class="descricao">(MOLHO ESPECIAL, MUSSARELA, FRANGO REFOGADO COM ABACAXI, PIMENTA SÍRIA, AÇAFRÃO, CREME DE LEITE E ORÉGANO)</div>
+</div>
+
+<div class="categoria" style="animation-delay: 2.8s;">
+    <h2>PIZZAS DOCES:</h2>
+    <div class="item">
+        <span class="item-nome">BANOFF</span>
+        <span class="item-preco">R$50,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, DOCE DE LEITE CREMOSO, BANANA E CANELA EM PÓ)</div>
+    
+    <div class="item">
+        <span class="item-nome">CHOCOLATE</span>
+        <span class="item-preco">R$43,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA E CHOCOLATE AO LEITE CREMOSO)</div>
+    
+    <div class="item">
+        <span class="item-nome">CHOCOLATE COM MORANGO</span>
+        <span class="item-preco">R$47,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, CHOCOLATE AO LEITE CREMOSO E MORANGOS)</div>
+    
+    <div class="item">
+        <span class="item-nome">DOIS AMORES</span>
+        <span class="item-preco">R$45,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, CHOCOLATE AO LEITE CREMOSO E CHOCOLATE BRANCO CREMOSO)</div>
+    
+    <div class="item">
+        <span class="item-nome">FLORESTA NEGRA</span>
+        <span class="item-preco">R$45,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, CHOCOLATE AO LEITE CREMOSO E CEREJAS)</div>
+    
+    <div class="item">
+        <span class="item-nome">NUTELLA COM MORANGO</span>
+        <span class="item-preco">R$52,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, NUTELLA E MORANGOS)</div>
+    
+    <div class="item">
+        <span class="item-nome">ROMEU E JULIETA</span>
+        <span class="item-preco">R$47,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA E GOIABADA CREMOSA)</div>
+    
+    <div class="item">
+        <span class="item-nome">KITKAT</span>
+        <span class="item-preco">R$50,00</span>
+    </div>
+    <div class="descricao">(MUSSARELA, CHOCOLATE E KITKAT)</div>
+    
+    <div class="item">
+        <span class="item-nome">SORVETE</span>
+        <span class="item-preco">R$59,00</span>
+    </div>
+    <div class="descricao">(SORVETE (CREME OU CHOCOLATE), CHOCOLATE BRANCO, CROCANTE DE CAJU, CASQUINHA)</div>
+</div>
+
+<div class="categoria" style="animation-delay: 3.4s;">
+    <h2>OPÇÕES DE BORDA:</h2>
+    <div class="item">
+        <span class="item-nome">BORDA TRADICIONAL (CHEDDAR OU CATUPIRY)</span>
+        <span class="item-preco">R$12,00</span>
+    </div>
+    
+    <div class="item">
+        <span class="item-nome">BORDA VULCÃO (CHEDDAR OU CATUPIRY)</span>
+        <span class="item-preco">R$15,00</span>
+    </div>
+    
+    <div class="item">
+        <span class="item-nome">BORDA CHOCOLATE</span>
+        <span class="item-preco">R$12,00</span>
+    </div>
+    
+    <div class="item">
+        <span class="item-nome">BORDA NUTELLA</span>
+        <span class="item-preco">R$16,00</span>
+    </div>
+</div>
+
+       <div class="categoria" style="animation-delay: 3.6s;">
+    <h2>ADICIONAIS PARA PIZZA:</h2>
+    <div class="item">
+        <span class="item-nome">GORGONZOLA</span>
+        <span class="item-preco">R$14,00 (Inteira) / R$7,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">BACON</span>
+        <span class="item-preco">R$12,00 (Inteira) / R$6,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">TOMATE SECO</span>
+        <span class="item-preco">R$12,00 (Inteira) / R$6,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">MILHO</span>
+        <span class="item-preco">R$6,00 (Inteira) / R$3,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">ALHO FRITO</span>
+        <span class="item-preco">R$6,00 (Inteira) / R$3,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">CALABRESA</span>
+        <span class="item-preco">R$20,00 (Inteira) / R$10,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">BRÓCOLIS</span>
+        <span class="item-preco">R$8,00 (Inteira) / R$4,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">ATUM</span>
+        <span class="item-preco">R$18,00 (Inteira) / R$9,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">LOMBINHO</span>
+        <span class="item-preco">R$12,00 (Inteira) / R$6,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">TOMATE CEREJA</span>
+        <span class="item-preco">R$8,00 (Inteira) / R$4,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">PALMITO</span>
+        <span class="item-preco">R$18,00 (Inteira) / R$9,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">RÚCULA</span>
+        <span class="item-preco">R$6,00 (Inteira) / R$3,00 (Meia)</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">OVO</span>
+        <span class="item-preco">R$8,00 (Inteira) / R$4,00 (Meia)</span>
+    </div>
+</div>
+
+       <div class="categoria" id="massas" style="animation-delay: 3.0s;">
+    <h2>MASSAS:</h2>
+    <div class="item">
+        <span class="item-nome">LASANHA (PARA 1 PESSOA)</span>
+        <span class="item-preco">R$42,00</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">LASANHA (PARA 2 PESSOA)</span>
+        <span class="item-preco">R$82,00</span>
+    </div>
+    <div class="descricao">BOLONHESA<br>FRANGO<br>QUATRO QUEIJO<br>PEITO DE PERU</div>
+    
+    <div class="item">
+        <span class="item-nome">RONDELLI (PARA 1 PESSOA)</span>
+        <span class="item-preco">R$40,00</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">RONDELLI (PARA 2 PESSOA)</span>
+        <span class="item-preco">R$80,00</span>
+    </div>
+    <div class="descricao">PRESUNTO E QUEIJO<br>QUATRO QUEIJO</div>
+    
+    <div class="item">
+        <span class="item-nome">NHOQUE (PARA 1 PESSOA)</span>
+        <span class="item-preco">R$37,00</span>
+    </div>
+    <div class="item">
+        <span class="item-nome">NHOQUE (PARA 2 PESSOA)</span>
+        <span class="item-preco">R$70,00</span>
+    </div>
+    <div class="descricao">MOLHO BOLONHESA<br>RAGU DE CARNE</div>
+</div>
+
+<div class="categoria" id="sobremesas" style="animation-delay: 3.2s;">
+    <h2>SOBREMESA:</h2>
+    <div class="item">
+        <span class="item-nome">PETIT GATEAU</span>
+        <span class="item-preco">R$25,00</span>
+    </div>
+    <div class="descricao">(ACOMPANHA 1 BOLA DE SORVETE)</div>
+    
+    <div class="item">
+        <span class="item-nome">BANOFF</span>
+        <span class="item-preco">R$25,00</span>
+    </div>
+    
+    <div class="item">
+        <span class="item-nome">MORANGONOFF</span>
+        <span class="item-preco">R$25,00</span>
+    </div>
+    
+    <div class="item">
+        <span class="item-nome">MOUSSE ROMEU E JULIETA</span>
+        <span class="item-preco">R$23,00</span>
+    </div>
+</div>
+        </div>
+    </div>
+</body>
+</html>
